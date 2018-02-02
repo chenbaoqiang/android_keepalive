@@ -5,8 +5,6 @@ import android.util.Log;
 import android.widget.Toast;
 
 import com.huawei.android.hms.agent.HMSAgent;
-import com.huawei.android.hms.agent.common.handler.ConnectHandler;
-
 import cn.com.feinno.keep.Config;
 
 /**

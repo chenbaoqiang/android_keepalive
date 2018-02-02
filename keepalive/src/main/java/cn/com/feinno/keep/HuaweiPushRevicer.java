@@ -1,12 +1,14 @@
 package cn.com.feinno.keep;
 
-import android.content.BroadcastReceiver;
 import android.content.Context;
-import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 
 import com.huawei.hms.support.api.push.PushReceiver;
+
+import cn.com.feinno.keep.service.MyJobService;
+import cn.com.feinno.keep.service.OnePixLiveService;
 
 /**
  * 版权所有 新媒传信科技有限公司。保留所有权利。<br>
@@ -29,6 +31,10 @@ public class HuaweiPushRevicer extends PushReceiver {
     @Override
     public boolean onPushMsg(Context context, byte[] msg, Bundle bundle) {
         Log.e(TAG, "HuaweiPushRevicer onPushMsg ");
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            MyJobService.startService(context);
+        }
+        OnePixLiveService.toLiveService(context);
         return true;
 
     }
