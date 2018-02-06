@@ -17,6 +17,8 @@ import com.xiaomi.mipush.sdk.MiPushClient;
 
 import java.util.List;
 
+import cn.com.feinno.keep.Config;
+
 /**
  * 1、为了打开客户端的日志，便于在开发过程中调试，需要自定义一个 Application。
  * 并将自定义的 application 注册在 AndroidManifest.xml 文件中。<br/>
@@ -27,13 +29,13 @@ import java.util.List;
 public class MiPushApplication extends Application {
 
     // user your appid the key.
-    private static final String APP_ID = "1000270";
+    private static final String APP_ID = "2882303761517712077";
     // user your appid the key.
-    private static final String APP_KEY = "670100056270";
+    private static final String APP_KEY = "5491771281077";
 
     // 此TAG在adb logcat中检索自己所需要的信息， 只需在命令行终端输入 adb logcat | grep
     // com.xiaomi.mipushdemo
-    public static final String TAG = "com.xiaomi.mipushdemo";
+    public static final String TAG = Config.TAG;
 
 
     @Override

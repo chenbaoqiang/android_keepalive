@@ -23,9 +23,9 @@
     <uses-permission android:name="android.permission.VIBRATE" />
 
     <permission
-        android:name="cn.com.feinno.keep.permission.MIPUSH_RECEIVE"
+        android:name="cn.com.feinno.keepalive.permission.MIPUSH_RECEIVE"
         android:protectionLevel="signature" />  <!--这里com.xiaomi.mipushdemo改成app的包名-->
-    <uses-permission android:name="cn.com.feinno.keep.permission.MIPUSH_RECEIVE" /> <!--这里com.xiaomi.mipushdemo改成app的包名-->
+    <uses-permission android:name="cn.com.feinno.keepalive.permission.MIPUSH_RECEIVE" /> <!--这里com.xiaomi.mipushdemo改成app的包名-->
 
     <application
         android:name=".MyApplication"
@@ -150,7 +150,7 @@
 
         <receiver
             android:exported="true"
-            android:name="com.xiaomi.mipush.DemoMessageReceiver"> <!--这里com.xiaomi.mipushdemo.DemoMessageRreceiver改成app中定义的完整类名-->
+            android:name="com.xiaomi.mipush.MiMessageReceiver"> <!--这里com.xiaomi.mipushdemo.DemoMessageRreceiver改成app中定义的完整类名-->
             <intent-filter>
                 <action android:name="com.xiaomi.mipush.RECEIVE_MESSAGE" />
             </intent-filter>

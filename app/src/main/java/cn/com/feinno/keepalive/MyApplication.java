@@ -5,6 +5,8 @@ import android.util.Log;
 import android.widget.Toast;
 
 import com.huawei.android.hms.agent.HMSAgent;
+import com.xiaomi.mipush.MiPushApplication;
+
 import cn.com.feinno.keep.Config;
 
 /**
@@ -17,7 +19,7 @@ import cn.com.feinno.keep.Config;
  * @since JDK1.8.0_152
  */
 
-public class MyApplication extends Application {
+public class MyApplication extends MiPushApplication {
     private static final String TAG = Config.TAG + "MyApplication";
 
     @Override
